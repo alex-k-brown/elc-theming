@@ -1,0 +1,46 @@
+@import 'shared.scss';
+
+.productGrid {
+    border-top: 1px solid $color-gray;
+    margin-top: 3.13rem;
+    padding-top: 1.19rem;
+    width: 100%;
+
+    &__heading {
+        margin: 0 0 2.25rem;
+    }
+    &__info {
+        height: 11.13rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__items {
+        column-gap: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 3.13rem;
+        width: 100%;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        height: 33.9em;
+        justify-content: space-between;
+        margin: 0;
+        width: 100%;
+
+        @media only screen and (min-width: $landscape-up) {
+            width: 17.25rem;
+        }
+    }
+    &__price {
+        color: $color-gray-dark;
+        font-weight: 400;
+    }
+    &__title {
+        font-weight: 400;
+    }
+}

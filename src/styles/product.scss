@@ -1,4 +1,48 @@
-
-@import 'variables.scss';
+@import 'shared.scss';
 
 /** Add styles here **/
+.product {
+    box-sizing: border-box;
+    margin: 3.38em 5% 3em;
+    width: 90%;
+
+    &__info {
+        color: $color-gray-dark;
+        font-weight: 400;
+        margin: 0 0 .69rem 0;
+
+        @media only screen and (min-width: $landscape-up) {
+            margin-left: 52.5%;
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
+        @media only screen and (min-width: $landscape-up) {
+            flex-direction: row;
+        }
+    }
+    &__image {
+        background-color: transparent;
+        height: initial;
+        padding: 0;
+        width: 100%;
+
+        @media only screen and (min-width: $landscape-up) {
+            width: 47.5%;
+        }
+    }
+    &__item_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
+        @media only screen and (min-width: $landscape-up) {
+            width: 47.5%;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@import 'shared.scss';
+
+.productPurchase {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.44rem;
+    row-gap: 2.25rem;
+
+    &__caret {
+        margin-left: 1.24em;
+        object-fit: contain;
+        width: 1.45em;
+    }
+    &__component {
+        width: 100%;
+
+        @media only screen and (min-width: $landscape-up) {
+            width: 48%;
+        }
+    }
+    &__minus {
+        margin: 0 .9em;
+    }
+    &__plus {
+        margin-left: .9em;
+    }
+    &__price {
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 1.14;
+    }
+    &__quantity {
+        align-items: center;
+        display: flex;
+        font-weight: 700;
+        width: 48%;
+    }
+    &__frequency {
+        align-items: center;
+        display: flex;
+        font-weight: 700;
+        width: 48%
+    }
+}
