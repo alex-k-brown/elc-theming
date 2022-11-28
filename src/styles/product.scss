@@ -3,16 +3,30 @@
 /** Add styles here **/
 .product {
     box-sizing: border-box;
-    margin: 3.38em 5% 3em;
+    margin: 1.31rem 5% 2.06rem;
     width: 90%;
 
+    @media only screen and (min-width: $landscape-up) {
+        margin: 3.38rem 5% 3rem;
+    }
+
+    &__image {
+        background-color: transparent;
+        height: initial;
+        padding: 0;
+        width: 100%;
+
+        @media only screen and (min-width: $landscape-up) {
+            width: 47.5%;
+        }
+    }
     &__info {
         color: $color-gray-dark;
         font-weight: 400;
-        margin: 0 0 .69rem 0;
+        margin: 0 0 1.93rem 0;
 
         @media only screen and (min-width: $landscape-up) {
-            margin-left: 52.5%;
+            margin: 0 0 .69rem 52.5%;
         }
     }
     &__item {
@@ -24,25 +38,16 @@
         @media only screen and (min-width: $landscape-up) {
             flex-direction: row;
         }
-    }
-    &__image {
-        background-color: transparent;
-        height: initial;
-        padding: 0;
-        width: 100%;
 
-        @media only screen and (min-width: $landscape-up) {
-            width: 47.5%;
-        }
-    }
-    &__item_info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-
-        @media only screen and (min-width: $landscape-up) {
-            width: 47.5%;
+        &--info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+    
+            @media only screen and (min-width: $landscape-up) {
+                width: 47.5%;
+            }
         }
     }
 }

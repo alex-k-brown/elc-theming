@@ -1,20 +1,33 @@
 @import 'shared.scss';
 
-.productGrid {
+.product-grid {
     border-top: 1px solid $color-gray;
-    margin-top: 3.13rem;
+    margin-top: 3.75rem;
     padding-top: 1.19rem;
     width: 100%;
 
+    @media only screen and (min-width: $landscape-up) {
+        margin-top: 3.13rem;
+    }
+
     &__heading {
-        margin: 0 0 2.25rem;
+        margin-bottom: 2rem;
+
+        @media only screen and (min-width: $landscape-up) {
+            margin-bottom: 2.25rem;
+        }
     }
     &__info {
-        height: 11.13rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        margin-top: 1.25rem;
         width: 100%;
+
+        @media only screen and (min-width: $landscape-up) {
+            height: 11.13rem;
+            justify-content: space-between;
+            margin-top: 0;
+        }
     }
     &__items {
         column-gap: 2%;
@@ -27,18 +40,25 @@
     &__item {
         display: flex;
         flex-direction: column;
-        height: 33.9em;
-        justify-content: space-between;
         margin: 0;
         width: 100%;
 
         @media only screen and (min-width: $landscape-up) {
+            height: 33.9em;
+            justify-content: space-between;
             width: 17.25rem;
         }
     }
     &__price {
         color: $color-gray-dark;
         font-weight: 400;
+    }
+    &__text {
+        margin-bottom: .63rem;
+
+        @media only screen and (min-width: $landscape-up) {
+            margin-bottom: 0;
+        }
     }
     &__title {
         font-weight: 400;
