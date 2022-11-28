@@ -19,22 +19,22 @@ export const Product = ({
     crossSell,
   },
 }) => (
-  <main>
-    <h4>{category}</h4>
-    <div>
-      <ProductImage image={imgURL} />
-    </div>
-    <div>
-      <ProductDesc
-        category={category}
-        name={name}
-        description={description}
-        rating={ratingURL}
-        features={features}
-        shade={shade}
-      />
-      <hr />
-      <ProductPurchase price={price} />
+  <main className="product">
+    <h4 className="bodyText product__info">{category}</h4>
+    <div className="product__item">
+      <ProductImage className="product__image" image={imgURL} />
+      <div className="product__item_info">
+        <ProductDesc
+          category={category}
+          name={name}
+          description={description}
+          rating={ratingURL}
+          features={features}
+          shade={shade}
+        />
+        <hr className="hr" />
+        <ProductPurchase price={price} />
+      </div>
     </div>
     <div>
       <ProductGrid
