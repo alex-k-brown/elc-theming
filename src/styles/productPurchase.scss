@@ -1,17 +1,26 @@
 @import 'shared.scss';
 
-.productPurchase {
+.product-purchase {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 1.44rem;
-    row-gap: 2.25rem;
+    margin-top: 1.25rem;
+    row-gap: 1.88rem;
+
+    @media only screen and (min-width: $landscape-up) {
+        margin-top: 1.44rem;
+        row-gap: 2.25rem;
+    }
 
     &__caret {
-        margin-left: 1.24em;
+        margin-left: 0;
         object-fit: contain;
         width: 1.45em;
+
+        @media only screen and (min-width: $landscape-up) {
+            margin-left: .88rem;
+        }
     }
     &__component {
         width: 100%;
@@ -20,6 +29,12 @@
             width: 48%;
         }
     }
+    &__frequency {
+        align-items: center;
+        display: flex;
+        font-weight: 700;
+        width: 48%
+    }
     &__minus {
         margin: 0 .9em;
     }
@@ -27,20 +42,21 @@
         margin-left: .9em;
     }
     &__price {
-        font-size: 1.75rem;
+        font-size: 1.25rem;
         font-weight: 700;
-        line-height: 1.14;
+        line-height: 1.2;
+        margin-top: .19rem;
+
+        @media only screen and (min-width: $landscape-up) {
+            font-size: 1.75rem;
+            line-height: 1.14;
+            margin-top: 0;
+        }
     }
     &__quantity {
         align-items: center;
         display: flex;
         font-weight: 700;
         width: 48%;
-    }
-    &__frequency {
-        align-items: center;
-        display: flex;
-        font-weight: 700;
-        width: 48%
     }
 }

@@ -20,10 +20,10 @@ export const Product = ({
   },
 }) => (
   <main className="product">
-    <h4 className="bodyText product__info">{category}</h4>
+    <h4 className="body-text product__info">{category}</h4>
     <div className="product__item">
       <ProductImage className="product__image" image={imgURL} />
-      <div className="product__item_info">
+      <div className="product__item--info">
         <ProductDesc
           category={category}
           name={name}
@@ -32,7 +32,7 @@ export const Product = ({
           features={features}
           shade={shade}
         />
-        <hr className="hr" />
+        <hr />
         <ProductPurchase price={price} />
       </div>
     </div>

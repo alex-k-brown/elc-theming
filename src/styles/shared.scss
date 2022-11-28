@@ -1,37 +1,74 @@
 @import 'variables.scss';
 
-.bodyText {
-    font-size: 1.06rem;
-    line-height: 1.41;
+h1 {
     margin: 0;
+}
+h2 {
+    font-size: 1.38rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1.09;
+    margin: 0;
+
+    @media only screen and (min-width: $landscape-up) {
+        font-size: 1.75rem;
+        line-height: 1.14;
+    }
+}
+h4 {
+    margin: 0;
+}
+hr {
+    background-color: $color-gray;
+    border: none;
+    height: 1px;
+    margin: 0;
+    width: 100%;
+}
+.body-text {
+    font-size: .94rem;
+    letter-spacing: .02em;
+    line-height: 1.33;
 
     a {
         color: inherit;
         text-decoration-color: $color-gray-dark;
     }
+
+    @media only screen and (min-width: $landscape-up) {
+        font-size: 1.06rem;
+        line-height: 1.41;
+    }
+
+    &--tight {
+        letter-spacing: -.01em;
+    }
 }
 .button {
     background-color: transparent;
     border: 2px solid $color-gray;
-    font-size: 1.06rem;
+    font-size: .94rem;
     font-weight: 700;
-    height: 4rem;
-    line-height: 1.41;
+    height: 3.5rem;
+    letter-spacing: -.01em;
+    line-height: 1.33;
 
-    &__style_dark {
+    @media only screen and (min-width: $landscape-up) {
+        font-size: 1.06rem;
+        height: 4rem;
+        line-height: 1.41;
+    }
+
+    &--dark {
         background-color: $color-black;
         color: white;
         border: 2px solid $color-black;
     }
 }
-.h2 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    line-height: 1.14;
-}
-.hr {
+hr {
     background-color: $color-gray;
     border: none;
     height: 1px;
+    margin: 0;
     width: 100%;
 }
